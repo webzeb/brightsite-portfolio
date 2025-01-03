@@ -43,6 +43,7 @@ document.fonts.ready.then(() => {
   });
 });
 
+/*
 // TEXT SCRAMBLE
 // Split the text into characters
 const scrambleText = new SplitType('[data-gsap="text-scramble"]', {
@@ -162,3 +163,4 @@ createShuffleEffect(
   "[No stone unturned]]",
   "[Not just things we use, things we cherish]"
 );
+*/
