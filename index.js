@@ -1,7 +1,6 @@
 console.log("Connected");
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrambleTextPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
 
 // Add this helper function at the top
 function isDesktop() {
@@ -129,22 +128,22 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       "-=0.2"
     );
-});
 
-// Scramble text on hover
-const scrambleTextElement = document.querySelector(
-  '[data-gsap="text-hover-scramble"]'
-);
-const scrambleTextInstance = new ScrambleText(scrambleTextElement, {
-  text: scrambleTextElement.textContent,
-  speed: 3, // Adjust the speed of the scrambling
-});
+  // Scramble text on hover
+  const scrambleTextElement = document.querySelector(
+    '[data-gsap="text-hover-scramble"]'
+  );
+  const scrambleTextInstance = new ScrambleText(scrambleTextElement, {
+    text: scrambleTextElement.textContent,
+    speed: 3, // Adjust the speed of the scrambling
+  });
 
-// Add event listeners for mouse enter and leave
-scrambleTextElement.addEventListener("mouseenter", () => {
-  scrambleTextInstance.scramble();
-});
+  // Add event listeners for mouse enter and leave
+  scrambleTextElement.addEventListener("mouseenter", () => {
+    scrambleTextInstance.scramble();
+  });
 
-scrambleTextElement.addEventListener("mouseleave", () => {
-  scrambleTextInstance.reveal();
+  scrambleTextElement.addEventListener("mouseleave", () => {
+    scrambleTextInstance.reveal();
+  });
 });
