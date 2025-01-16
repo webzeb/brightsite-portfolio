@@ -1,5 +1,6 @@
 // Archived code I may or may not use again
 
+// H1 TEXT FLOAT DOWN
 // Wait for fonts to load before running animations
 document.fonts.ready.then(() => {
   // Text float down setup
